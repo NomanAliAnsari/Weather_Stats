@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             alert(`No Place has No Weather \n          Good Day! 😉`);
             return;
         }
-        console.log(cityName);
+        // console.log(cityName);
 
         // call API
         updateStats(cityName);
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
     async function updateStats(city){
-        console.log("Inside the update function");
+        // console.log("Inside the update function");
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fbb3c9a1721f9e8dbab73f0dc887b2a6&units=metric`;
 
         let apiData = await fetch(url);
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const feelsLike = data.main.feels_like;
         const humidity = data.main.humidity;
         const iconCode = data.weather[0].icon;
-        console.log("icon code " + iconCode);
+        // console.log("icon code " + iconCode);
         const mainDesc = data.weather[0].description;
         const cty = data.name;
         const cntryID = data.sys.country;
